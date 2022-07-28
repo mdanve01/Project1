@@ -1,0 +1,19 @@
+for n in 110045 110101 110182 120182 121194 210023 221336 221585 221954 223085 310135 320089 320321 320336 320359 320379 322186 410129 410179 410289 410297 420094 420180 420241 420260 420286 420324 510220 510568 520078 520083 520168 520279 520562 520980 610046 610285 610372 610568 610575 610594 610625 620129 620152 620284 620413 620444 620454 620557 620821 620919 621080 710214 710494 710679 712027 720358 720400 721114 721434 721891 722216 723395
+
+
+
+do
+
+cd /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/epi_smt
+mkdir outliers
+mv *sub-CC${n}* /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/epi_smt/outliers
+
+cd /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/anat
+mkdir outliers
+mv *sub-CC${n}* /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/anat/outliers
+
+cd /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/fmap_smt
+mkdir outliers
+mv *sub-CC${n}* /MRIWork/MRIWork06/nr/matthew_danvers/camCAN/raw_data/fmap_smt/outliers
+
+done
