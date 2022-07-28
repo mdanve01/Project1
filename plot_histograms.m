@@ -1,0 +1,22 @@
+cd '/MRIWork/MRIWork06/nr/matthew_danvers/camCAN/full_run/checks/QA/range';
+results = importdata('results.mat');
+
+figure(1);
+subplot(3,2,1);histogram(results(:,2),'BinWidth',1.5,'facecolor','r');
+xlabel('Temporal Range (Max)');
+ylabel('Number of Participants');
+subplot(3,2,2);histogram(results(:,3),'facecolor','r');
+xlabel('Spatial Range (Max)');
+ylabel('Number of Participants');
+subplot(3,2,3);histogram(results(:,4),'BinWidth',1.5,'facecolor','g');
+xlabel('Temporal Shift (Max)');
+ylabel('Number of Participants');
+subplot(3,2,4);histogram(results(:,5),'facecolor','g');
+xlabel('Spatial Shift (Max)');
+ylabel('Number of Participants');
+subplot(3,2,5);histogram(results(:,6),'facecolor','b');
+xlabel('Temporal COV (Max)');
+ylabel('Number of Participants');
+subplot(3,2,6);histogram(results(:,7),'facecolor','b');
+xlabel('Spatial COV (Max)');
+ylabel('Number of Participants');
