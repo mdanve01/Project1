@@ -15,11 +15,13 @@ HRF1 = bfs(:,1);
 
 HRFc = HRF1 ./ max(HRF1);
 
+% create the funciton with a halved peak latency AND dispersion
 for n = 1: 130;
     short(n) = HRFc(n.*2);
 end
 short(131:260) = 0;
 
+% create the function with a doubled peak latency AND dispersion
 clear n
 for n = 1:260
     long(n.*2) = HRFc(n);
@@ -35,7 +37,7 @@ end
 
 long2 = long(1:260);
 
-% find parameters
+% find parameters to check it worked
 thresh1 = (max(long2)) .* 0.5;
 sec = 260 ./ 32;
 [PKS,LOCS,widths] = findpeaks(long2,'MinPeakProminence',thresh1);
