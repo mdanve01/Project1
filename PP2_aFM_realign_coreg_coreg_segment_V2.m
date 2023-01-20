@@ -34,7 +34,7 @@ inputs = cell(5, 1) % specifies how many empty cells there are in the template s
     inputs{2, 1} = {mag} % Calculate VDM: Magnitude Image - cfg_files
     inputs{3, 1} = {epi1} % Calculate VDM: Select EPI to Unwarp - cfg_files
     inputs{4, 1} = {epi} % Realign & Unwarp: Images - cfg_files - specify the (path,:}
-    inputs{5, 1} = {t1} % Coregister: Estimate & Reslice: Source Image - cfg_files - specify the {path,1}
+    inputs{5, 1} = {t1} % Coregister: Estimate: Source Image - cfg_files - specify the {path,1}
   
 
 
